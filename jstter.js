@@ -1,3 +1,6 @@
+/**
+ *  Testing github inline editor.
+ */
 if (jstter === undefined) {
     var jstter = {}
 }
