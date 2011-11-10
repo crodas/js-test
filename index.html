@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>jstter simple class</title>
+    <script src="./jstter.js"></script>
+    <script>
+        var obj = new jstter.twitter();
+        obj.each(function(tweet) {
+            //alert(tweet.text);
+        });
+        //obj.users(['crodas', 'gallir', 'chelun']);
+        //obj.users(['crodas', 'gallir', 'chelun']);
+        //obj.query("paola bracho");
+        obj.users('crodas');
+        obj.render("container", "model");
+        obj.fetch();
+        setInterval(function() { obj.fetch() }, 15000);
+    </script>
+</head>
+<body>
+<table>
+    <thead>
+        <tr>
+            <td>Who?</td>
+            <td>What?</td>
+       </tr>
+    </thead>
+    <tbody id="container">
+    </tbody>
+</table>
+<table style="display:none">
+    <tr id="model">
+        <td><b>@#from_user</b></td>
+        <td><em>#text</em></td>
+    </tr>
+</table>
+
+</body>
+</html>
